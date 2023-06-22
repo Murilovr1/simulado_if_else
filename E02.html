@@ -9,9 +9,32 @@
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
-
+    const p1 = Number(prompt("Quanto as unidades de mamão custam ao todo?"));
+    const p2 = Number(prompt("Quanto os 3kg de melancia custam ?"));
+    const p3 = Number(prompt("Quanto as unidades de abacate custam ao todo ?"));
+    const p4 = Number(prompt("Quanto o 1.1 kg de cebola custa ?"));
+    const dinheiro = Number(prompt("Quanto de dinheiro você possui consigo no momento"));
 
     //PROCESSAMENTO
+    if (isNaN(p1) || isNaN(p2) || isNaN(p3) || isNaN(p4) || isNaN(dinheiro)){
+        alert(`Insira números válidos`);
+    }
+    const preço = p1 + p2 + p3 + p4;
+    const resul = dinheiro - preço;
+    const resul2 = preço - dinheiro;
+
+
+    if  (preço < dinheiro){
+        alert(`A compra custou R$${preço} e sobrou R$${resul}`);
+
+    }
+    if  (preço > dinheiro){
+        alert(`A compra custou ${preço} e faltou R$${resul2} para comprar tudo`);
+
+    }
+
+
+
 
 
     //SAÍDA

@@ -6,9 +6,33 @@
     //Contudo, caso o aluno que ajudou (TUTOR) obteve maior nota, bonifique-o com um adicional de 10% da nota do aluno ajudado, e o programa apresentará a mensagem "CONTINUE ENSINANDO!" e também apresentará a nota final do aluno que ajudou (TUTOR).
 
     //ENTRADA
+    const nota = Number(prompt("Quanto foi a sua nota ?"))
+    const nota2 = Number(prompt("Qual foi a nota que seu companheiro tirou ?"))
 
 
     //PROCESSAMENTO
+    if (isNaN(nota) ||isNaN(nota2)) {
+        alert(`Insira números válidos`);
+    }
+    
+    
+     else if (nota == nota2) {
+            alert(`Insira números de valores diferentes`);
+        }
+
+    else if (nota < nota2) {
+        alert(`Cria maior que o Criador e a nota foi ${nota2}`);
+    }
+
+    else if(nota > nota2) {
+        const nota3 = nota + (nota2 * 0.1);
+         alert(`Continue ensinando!A nota final foi ${nota3}`);
+    }
+            
+       
+    
+
+    
 
 
     //SAÍDA
